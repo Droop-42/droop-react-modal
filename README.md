@@ -25,11 +25,14 @@ import './index.css';
 import Modal from './lib/components/Modal'
 
 function Example () {
+  // Add a state to check if the modal is open
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div>
+      { /* Create a button to open the modal*/ }
       <button className="modalBtn" onClick={() => setIsModalOpen(true)}>Open Modal</button>
+      { /* If isModalOpen is true, open the modal*/ }
       {
           isModalOpen && 
           <Modal setIsOpen={setIsModalOpen} >
